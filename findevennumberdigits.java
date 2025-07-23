@@ -8,27 +8,33 @@ public class findevennumberdigits {
         }
         return count;
     }
-    static boolean even(int nums){
-        int numberofdigits = digits(nums);
 
+    static boolean even(int nums){
+        int numberofdigits = (int)(Math.log10(nums)) + 1;
         return numberofdigits % 2 == 0;
     }
-    static int digits(int n){
-        if(n < 0){
-            n = n * -1;
-        }
-        if(n == 0){
-            return 1;
-        }
-        int count = 0;
-        while(n > 0){
-            count++;
-            n /= 10;
-        }
-        return count;
-    }
+    // static boolean even(int nums){
+    //     int numberofdigits = digits(nums);
+
+    //     return numberofdigits % 2 == 0;
+    // }
+    // static int digits(int n){
+    //     if(n < 0){
+    //         n = n * -1;
+    //     }
+    //     if(n == 0){
+    //         return 1;
+    //     }
+    //     int count = 0;
+    //     while(n > 0){
+    //         count++;
+    //         n /= 10;
+    //     }
+    //     return count;
+    // }
     
     public static void main(String[] args) {
+        // https://leetcode.com/problems/find-numbers-with-even-number-of-digits/submissions/1708822715/
         int[] nums = {12,345,2,6,7896};
         System.out.println(findNumbers(nums));
     }
