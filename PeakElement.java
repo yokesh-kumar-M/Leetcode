@@ -15,6 +15,7 @@ class PeakElement{
         return start;
     }
     public static void main(String[] args) {
+        // https://leetcode.com/problems/find-peak-element/submissions/1711145575/
         int[] arr = {1,2,3,1};
         System.out.println(findPeakElement(arr));
         // Algorithm should be O(log(N))
