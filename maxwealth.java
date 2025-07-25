@@ -27,6 +27,7 @@ public class maxwealth {
         return value;
     }
     public static void main(String[] args) {
+        // https://leetcode.com/problems/richest-customer-wealth/submissions/1708894369/
         int[][] arr = {
             {1,2,3},
             {3,2,1}
