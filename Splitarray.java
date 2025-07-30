@@ -1,5 +1,4 @@
 public class Splitarray {
-    // this is a dumy push
     public static void main(String[] args) {
         // Binary search = O(log(N))
         int[] arr = {7,2,5,10,8};
