@@ -17,10 +17,7 @@ public class Badpair {
         int[] arr1 = {4,1,3,3};
         int[] arr2 = {1,2,3,4,5};
         System.out.println(countBadPairs(arr1));
-        // dummy commit 1
         
-       
-      
     }
 
 }
