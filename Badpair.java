@@ -19,7 +19,7 @@ public class Badpair {
         System.out.println(countBadPairs(arr1));
         // dummy commit 1
         // dummy commit 2
-        // dummy commit 3 
+       
       
     }
 
