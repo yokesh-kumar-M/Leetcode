@@ -21,6 +21,7 @@ public class Badpair {
         // dummy commit 1 --- IGNORE ---
         // dummy commit 2 --- IGNORE ---
         // dummy commit 3  --- IGNORE ---
+        // dummy commit 4 --- IGNORE ---
     }
 
 }
