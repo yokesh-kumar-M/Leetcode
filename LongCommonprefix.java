@@ -19,6 +19,7 @@ public class LongCommonprefix {
     public static void main(String[] args){
         String[] strs = {"flower", "flow", "flight"};
         String[] strs1 = {"dog", "racecar", "car"};
+        String[] strs2 = {"game", "gamer", "games", "gamed"};
         System.out.println(longestCommonPrefix(strs));
         // System.out.println(longestCommonPrefix(strs1));
         //longestCommonPrefix(strs);
