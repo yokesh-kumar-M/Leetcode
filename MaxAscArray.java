@@ -22,5 +22,6 @@ public class MaxAscArray {
         int[] arr3 = {100,10,1};
         //System.out.println(maxAscendingArray(arr1));
         maxAscendingArray(arr1);
+        maxAscendingArray(arr2);        
     }
 }
