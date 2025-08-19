@@ -23,5 +23,6 @@ public class LongCommonprefix {
         System.out.println(longestCommonPrefix(strs));
         //longestCommonPrefix(strs);
         // Dummy commit 1 -- IGNORE --
+        // Dummy commit 2 -- IGNORE --
     }
 }
