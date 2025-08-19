@@ -23,6 +23,5 @@ public class LongCommonprefix {
         System.out.println(longestCommonPrefix(strs));
         //longestCommonPrefix(strs);
         // System.out.println(longestCommonPrefix(strs1));
-        System.out.println(longestCommonPrefix(strs2));
     }
 }
