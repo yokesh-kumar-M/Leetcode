@@ -22,6 +22,6 @@ public class LongCommonprefix {
         String[] strs2 = {"game", "gamer", "games", "gamed"};
         System.out.println(longestCommonPrefix(strs));
         //longestCommonPrefix(strs);
-
+        // System.out.println(longestCommonPrefix(strs1));
     }
 }
