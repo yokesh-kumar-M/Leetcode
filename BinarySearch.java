@@ -19,4 +19,5 @@ public class BinarySearch {
         System.out.println(search(nums, target));
     }
     // dummy commit 1
+    // dummy commit 2
 }
