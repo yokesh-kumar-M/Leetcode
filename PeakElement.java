@@ -19,5 +19,6 @@ class PeakElement{
         int[] arr = {1,2,3,1};
         System.out.println(findPeakElement(arr));
         // Algorithm should be O(log(N))
+        // dummy commit 1
     }
 }
