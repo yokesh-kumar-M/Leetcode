@@ -37,5 +37,6 @@ public class maxwealth {
         };
 
         System.out.println(maximumWealth(arr1));
+        // dummy commit 1
     }
 }
