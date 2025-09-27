@@ -23,6 +23,7 @@ public class Badpair {
         // dummy commit 3 --- IGNORE ---
         // dummy commit 4 --- IGNORE ---
         // dummy commit 5 --- IGNORE ---
+       // dummy commit 6 --- IGNORE ---
     }
 
 }
