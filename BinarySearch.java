@@ -22,4 +22,5 @@ public class BinarySearch {
     // dummy commit 2
     // dummy commit 3
     // dummy commit 4
+    // dummy commit 5
 }
