@@ -30,5 +30,6 @@ public class FindAllDuplicate {
         arr[first] = arr[last];
         arr[last] = temp;
         // dummy commit 1
+        // dummy commit 2
     }
 }
