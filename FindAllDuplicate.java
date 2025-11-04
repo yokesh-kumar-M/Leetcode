@@ -29,5 +29,9 @@ public class FindAllDuplicate {
         int temp = arr[first];
         arr[first] = arr[last];
         arr[last] = temp;
+        // dummy commit 1
+        // dummy commit 2
+        // dummy commit 3
+        // dummy commit 4
     }
 }
