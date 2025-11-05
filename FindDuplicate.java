@@ -47,6 +47,7 @@ public class FindDuplicate {
         arr[last] = temp;
     }
     // dummy commit 1
+    // dummy commit 2
 
     
 }
