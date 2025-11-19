@@ -21,5 +21,6 @@ public class TwoSum {
         int[] nums = {2,7,11,15};
         int target = 9;
         System.out.println(twoSum(nums,target));
+       // dummy commit 1
     }
 } 
