@@ -21,5 +21,6 @@ class PeakElement{
         // Algorithm should be O(log(N))
         // dummy commit 1
         // dummy commit 2
+        // dummy commit 3
     }
 }
