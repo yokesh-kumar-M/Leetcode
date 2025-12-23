@@ -1,19 +1,26 @@
 import java.util.Arrays;
 
+// 977. Squares of a Sorted Array
 public class SquaresortArray {
     public static void main(String[] args) {
         int[] arr = {-4, -1, 0, 3, 10};
         System.out.println(Arrays.toString(sortedSquares(arr)));
-    }
-    static int[] sortedSquares(int[] nums){
-        squares(nums);
-        return sort(nums);
     }
     static int[] squares(int[] nums){
         for(int i=0; i<nums.length; i++){
             nums[i] *= nums[i];
         }
         return nums;
+    }
+    static int[] sortedSquares(int[] nums){
+        Arrays.sort(squares(nums));
+        return nums;
+    }
+
+    /** Without sorting Algorithm
+    static int[] sortedSquares(int[] nums){
+        squares(nums);
+        return sort(nums);
     }
     static int[] sort(int[] nums){
         for(int i=0; i<nums.length; i++){
@@ -27,4 +34,5 @@ public class SquaresortArray {
         }
         return nums;
     }
+    **/
 }
