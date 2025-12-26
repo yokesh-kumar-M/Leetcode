@@ -1,4 +1,4 @@
-// 709.To Lower Case
+// 709.To Lower Case.
 public class TolowerCase {
     public static void main(String[] args) {
         String s = "Hello";
