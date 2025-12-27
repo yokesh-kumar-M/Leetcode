@@ -27,7 +27,6 @@ public class MidinLinkedList{
         head.next.next = new ListNode(4);
         head.next.next.next = new ListNode(5);
 
-
         Solution solution = new Solution();
 
         ListNode middle = solution.middleNode(head);
