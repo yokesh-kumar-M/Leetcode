@@ -1,3 +1,4 @@
+// 876. Middle of the Linked List.
 public class MidinLinkedList{
     static class ListNode{
         int val;
@@ -31,6 +32,6 @@ public class MidinLinkedList{
 
         ListNode middle = solution.middleNode(head);
 
-        System.out.println("Middle node value: "+middle.val);
+        System.out.println(middle.val);
     }
 }
