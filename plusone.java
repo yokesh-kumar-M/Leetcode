@@ -19,10 +19,10 @@ public class plusone {
     }
 */
 
-    static plusOne(int[] digits){
+    static int[] plusOne(int[] digits){
         int length = digits.length;
 
-        for(int i=digits-1; i>=0; i--){
+        for(int i=length-1; i>=0; i--){
             digits[i] += 1;
 
             digits[i] %= 10;
