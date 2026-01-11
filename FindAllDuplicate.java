@@ -36,5 +36,6 @@ public class FindAllDuplicate {
         // dummy commit 5
        // dummy commit 6
        // dummy commit 7
+       // dummy commit 8
     }
 }
