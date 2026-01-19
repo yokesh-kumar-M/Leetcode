@@ -1,8 +1,10 @@
+// 647. Palindromic Substring.
 public class PalindromicSubstring {
     public static void main(String[] args) {
         String s = "aaa";
         System.out.println(countSubString(s));
     }
+    // O(N^2) - Time complexity for solving.
     static int countSubString(String s){
 
         int count = 0;
