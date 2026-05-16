@@ -1,27 +1,27 @@
-// 69. Square Root of a Number.
+// 69. Sqrt(x)
 public class SquareRoot {
-    public static void main(String[] args) {
-        int n = 2147395600;  // 46340
+    static int mySqrt(int n) {
+        if (n < 2) {
+            return n;
+        }
 
-        System.out.println(mySqrt(n));
-    }
-    static int mySqrt(int n){
-        
-        if(n < 2) return n;
-
-        int low = 1, high = n;
+        int low = 1;
+        int high = n;
         int ans = 0;
 
-        while(low <= high){
+        while (low <= high) {
             int mid = low + (high - low) / 2;
-
-            if(mid <= n/mid){
+            if (mid <= n / mid) {
                 ans = mid;
                 low = mid + 1;
-            } else{
+            } else {
                 high = mid - 1;
             }
         }
         return ans;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(mySqrt(2147395600));
     }
 }

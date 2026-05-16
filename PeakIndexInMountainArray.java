@@ -1,6 +1,6 @@
-// 162. Find Peak Element
-public class PeakElement {
-    static int findPeakElement(int[] arr) {
+// 852. Peak Index in a Mountain Array
+public class PeakIndexInMountainArray {
+    static int peakIndexInMountainArray(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
 
@@ -16,7 +16,7 @@ public class PeakElement {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 1};
-        System.out.println(findPeakElement(arr));
+        int[] nums = {0, 10, 5, 2};
+        System.out.println(peakIndexInMountainArray(nums));
     }
 }

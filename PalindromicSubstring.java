@@ -1,28 +1,25 @@
-// 647. Palindromic Substring.
+// 647. Palindromic Substrings
 public class PalindromicSubstring {
-    public static void main(String[] args) {
-        String s = "aaa";
-        System.out.println(countSubString(s));
-    }
-    // O(N^2) - Time complexity for solving.
-    static int countSubString(String s){
-
+    static int countSubstrings(String s) {
         int count = 0;
-        for(int i=0; i<s.length(); i++){
-            count += expandCenter(s, i, i);
-            count += expandCenter(s, i, i+1);
+        for (int i = 0; i < s.length(); i++) {
+            count += expandAroundCenter(s, i, i);
+            count += expandAroundCenter(s, i, i + 1);
         }
         return count;
     }
-    static int expandCenter(String s, int left, int right){
-        int count = 0;
-        int length = s.length();
 
-        while(left >= 0 && right < length && s.charAt(left) == s.charAt(right)){
+    static int expandAroundCenter(String s, int left, int right) {
+        int count = 0;
+        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
             count++;
             left--;
             right++;
         }
         return count;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(countSubstrings("aaa"));
     }
 }

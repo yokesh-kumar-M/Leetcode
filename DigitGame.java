@@ -1,23 +1,21 @@
-// 3232. Find if Digit Game Can be Won.
+// 3232. Find if Digit Game Can Be Won
 public class DigitGame {
-    public static void main(String[] args) {
-        int[] arr = {1,2,3,4,10};
+    static boolean canAliceWin(int[] nums) {
+        int singleDigitSum = 0;
+        int doubleDigitSum = 0;
 
-        System.out.println(canAliceWin(arr));
-
-        // canAliceWin(arr);
-    }
-    static boolean canAliceWin(int[] arr){
-        int s = 0, d = 0;
-
-        for(int i=0; i<arr.length; i++){
-            if(arr[i] < 10){
-                s += arr[i];
-            }else{
-            d += arr[i];
+        for (int num : nums) {
+            if (num < 10) {
+                singleDigitSum += num;
+            } else {
+                doubleDigitSum += num;
             }
         }
-        if(s == d) return false;
-        return true;
+        return singleDigitSum != doubleDigitSum;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 3, 4, 10};
+        System.out.println(canAliceWin(nums));
     }
 }

@@ -1,26 +1,24 @@
-import java.io.*;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
+// 1. Two Sum
 public class TwoSum {
     static int[] twoSum(int[] nums, int target) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> seen = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
-            int other = target - nums[i];
-            
-            if (map.containsKey(other)) {
-                return new int[]{i, map.get(other)};
+            int complement = target - nums[i];
+            if (seen.containsKey(complement)) {
+                return new int[]{seen.get(complement), i};
             }
-            
-            map.put(nums[i], i);
+            seen.put(nums[i], i);
         }
-        
-        return new int[]{}; 
+        return new int[]{};
     }
-    public static void main(String args[]){
-        int[] nums = {2,7,11,15};
-        int target = 9;
-        System.out.println(twoSum(nums,target));
-       // dummy commit 1
+
+    public static void main(String[] args) {
+        int[] nums = {2, 7, 11, 15};
+        System.out.println(Arrays.toString(twoSum(nums, 9)));
     }
-} 
+}
