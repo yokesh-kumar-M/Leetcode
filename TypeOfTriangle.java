@@ -1,5 +1,12 @@
 // 3024. Type of Triangle
+import java.util.logging.Logger;
+
 public class TypeOfTriangle {
+    private static final Logger LOGGER = Logger.getLogger(TypeOfTriangle.class.getName());
+
+    private TypeOfTriangle() {
+    }
+
     static String triangleType(int[] nums) {
         int a = nums[0];
         int b = nums[1];
@@ -19,6 +26,6 @@ public class TypeOfTriangle {
 
     public static void main(String[] args) {
         int[] arr = {5, 3, 8};
-        System.out.println(triangleType(arr));
+        LOGGER.info(() -> String.valueOf(triangleType(arr)));
     }
 }

@@ -1,5 +1,12 @@
 // 709. To Lower Case
+import java.util.logging.Logger;
+
 public class ToLowerCase {
+    private static final Logger LOGGER = Logger.getLogger(ToLowerCase.class.getName());
+
+    private ToLowerCase() {
+    }
+
     static String toLowerCase(String s) {
         StringBuilder sb = new StringBuilder(s.length());
 
@@ -14,6 +21,6 @@ public class ToLowerCase {
     }
 
     public static void main(String[] args) {
-        System.out.println(toLowerCase("Hello"));
+        LOGGER.info(() -> String.valueOf(toLowerCase("Hello")));
     }
 }

@@ -1,5 +1,12 @@
 // 1780. Check if Number is a Sum of Powers of Three
+import java.util.logging.Logger;
+
 public class CheckPowersOfThree {
+    private static final Logger LOGGER = Logger.getLogger(CheckPowersOfThree.class.getName());
+
+    private CheckPowersOfThree() {
+    }
+
     static boolean checkPowersOfThree(int n) {
         while (n > 0) {
             if (n % 3 == 2) {
@@ -11,8 +18,8 @@ public class CheckPowersOfThree {
     }
 
     public static void main(String[] args) {
-        System.out.println(checkPowersOfThree(12));
-        System.out.println(checkPowersOfThree(91));
-        System.out.println(checkPowersOfThree(21));
+        LOGGER.info(() -> String.valueOf(checkPowersOfThree(12)));
+        LOGGER.info(() -> String.valueOf(checkPowersOfThree(91)));
+        LOGGER.info(() -> String.valueOf(checkPowersOfThree(21)));
     }
 }

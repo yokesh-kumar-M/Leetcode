@@ -1,5 +1,12 @@
 // 410. Split Array Largest Sum
+import java.util.logging.Logger;
+
 public class SplitArray {
+    private static final Logger LOGGER = Logger.getLogger(SplitArray.class.getName());
+
+    private SplitArray() {
+    }
+
     static int splitArray(int[] arr, int k) {
         int start = 0;
         int end = 0;
@@ -33,6 +40,6 @@ public class SplitArray {
 
     public static void main(String[] args) {
         int[] arr = {7, 2, 5, 10, 8};
-        System.out.println(splitArray(arr, 2));
+        LOGGER.info(() -> String.valueOf(splitArray(arr, 2)));
     }
 }

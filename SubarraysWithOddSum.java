@@ -1,5 +1,12 @@
 // 1524. Number of Sub-arrays With Odd Sum
+import java.util.logging.Logger;
+
 public class SubarraysWithOddSum {
+    private static final Logger LOGGER = Logger.getLogger(SubarraysWithOddSum.class.getName());
+
+    private SubarraysWithOddSum() {
+    }
+
     private static final int MOD = 1_000_000_007;
 
     static int numOfSubarrays(int[] arr) {
@@ -23,6 +30,6 @@ public class SubarraysWithOddSum {
 
     public static void main(String[] args) {
         int[] arr = {1, 3, 5};
-        System.out.println(numOfSubarrays(arr));
+        LOGGER.info(() -> String.valueOf(numOfSubarrays(arr)));
     }
 }

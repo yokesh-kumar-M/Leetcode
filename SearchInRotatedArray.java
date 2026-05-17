@@ -1,5 +1,12 @@
 // 33. Search in Rotated Sorted Array
+import java.util.logging.Logger;
+
 public class SearchInRotatedArray {
+    private static final Logger LOGGER = Logger.getLogger(SearchInRotatedArray.class.getName());
+
+    private SearchInRotatedArray() {
+    }
+
     static int search(int[] arr, int target) {
         int pivot = findPivot(arr);
 
@@ -53,6 +60,6 @@ public class SearchInRotatedArray {
 
     public static void main(String[] args) {
         int[] arr = {3, 5, 1};
-        System.out.println(search(arr, 3));
+        LOGGER.info(() -> String.valueOf(search(arr, 3)));
     }
 }

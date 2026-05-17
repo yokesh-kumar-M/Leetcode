@@ -1,5 +1,12 @@
 // 162. Find Peak Element
+import java.util.logging.Logger;
+
 public class PeakElement {
+    private static final Logger LOGGER = Logger.getLogger(PeakElement.class.getName());
+
+    private PeakElement() {
+    }
+
     static int findPeakElement(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
@@ -17,6 +24,6 @@ public class PeakElement {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 1};
-        System.out.println(findPeakElement(arr));
+        LOGGER.info(() -> String.valueOf(findPeakElement(arr)));
     }
 }

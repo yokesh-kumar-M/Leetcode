@@ -1,8 +1,14 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 // 1726. Tuple with Same Product
 public class TuplesWithSameProduct {
+    private static final Logger LOGGER = Logger.getLogger(TuplesWithSameProduct.class.getName());
+
+    private TuplesWithSameProduct() {
+    }
+
     static int tupleSameProduct(int[] nums) {
         Map<Integer, Integer> productCount = new HashMap<>();
 
@@ -22,6 +28,6 @@ public class TuplesWithSameProduct {
 
     public static void main(String[] args) {
         int[] nums = {2, 3, 4, 6};
-        System.out.println(tupleSameProduct(nums));
+        LOGGER.info(() -> String.valueOf(tupleSameProduct(nums)));
     }
 }

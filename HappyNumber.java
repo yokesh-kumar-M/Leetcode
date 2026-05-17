@@ -1,8 +1,14 @@
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Logger;
 
 // 202. Happy Number
 public class HappyNumber {
+    private static final Logger LOGGER = Logger.getLogger(HappyNumber.class.getName());
+
+    private HappyNumber() {
+    }
+
     static boolean isHappy(int n) {
         Set<Integer> seen = new HashSet<>();
 
@@ -26,6 +32,6 @@ public class HappyNumber {
     }
 
     public static void main(String[] args) {
-        System.out.println(isHappy(2));
+        LOGGER.info(() -> String.valueOf(isHappy(2)));
     }
 }

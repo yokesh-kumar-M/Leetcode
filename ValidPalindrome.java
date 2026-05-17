@@ -1,5 +1,12 @@
 // 125. Valid Palindrome
+import java.util.logging.Logger;
+
 public class ValidPalindrome {
+    private static final Logger LOGGER = Logger.getLogger(ValidPalindrome.class.getName());
+
+    private ValidPalindrome() {
+    }
+
     static boolean isPalindrome(String s) {
         int left = 0;
         int right = s.length() - 1;
@@ -21,8 +28,8 @@ public class ValidPalindrome {
     }
 
     public static void main(String[] args) {
-        System.out.println(isPalindrome("A man, a plan, a canal: Panama"));
-        System.out.println(isPalindrome("Malayalam"));
-        System.out.println(isPalindrome("race a car"));
+        LOGGER.info(() -> String.valueOf(isPalindrome("A man, a plan, a canal: Panama")));
+        LOGGER.info(() -> String.valueOf(isPalindrome("Malayalam")));
+        LOGGER.info(() -> String.valueOf(isPalindrome("race a car")));
     }
 }

@@ -1,5 +1,12 @@
 // 69. Sqrt(x)
+import java.util.logging.Logger;
+
 public class SquareRoot {
+    private static final Logger LOGGER = Logger.getLogger(SquareRoot.class.getName());
+
+    private SquareRoot() {
+    }
+
     static int mySqrt(int n) {
         if (n < 2) {
             return n;
@@ -22,6 +29,6 @@ public class SquareRoot {
     }
 
     public static void main(String[] args) {
-        System.out.println(mySqrt(2147395600));
+        LOGGER.info(() -> String.valueOf(mySqrt(2147395600)));
     }
 }

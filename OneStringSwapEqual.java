@@ -1,5 +1,12 @@
 // 1790. Check if One String Swap Can Make Strings Equal
+import java.util.logging.Logger;
+
 public class OneStringSwapEqual {
+    private static final Logger LOGGER = Logger.getLogger(OneStringSwapEqual.class.getName());
+
+    private OneStringSwapEqual() {
+    }
+
     static boolean areAlmostEqual(String s1, String s2) {
         if (s1.equals(s2)) {
             return true;
@@ -28,9 +35,9 @@ public class OneStringSwapEqual {
     }
 
     public static void main(String[] args) {
-        System.out.println(areAlmostEqual("blank", "klanb"));
-        System.out.println(areAlmostEqual("defend", "attack"));
-        System.out.println(areAlmostEqual("kelb", "kelb"));
-        System.out.println(areAlmostEqual("abc", "acb"));
+        LOGGER.info(() -> String.valueOf(areAlmostEqual("blank", "klanb")));
+        LOGGER.info(() -> String.valueOf(areAlmostEqual("defend", "attack")));
+        LOGGER.info(() -> String.valueOf(areAlmostEqual("kelb", "kelb")));
+        LOGGER.info(() -> String.valueOf(areAlmostEqual("abc", "acb")));
     }
 }

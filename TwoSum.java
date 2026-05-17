@@ -1,9 +1,15 @@
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 // 1. Two Sum
 public class TwoSum {
+    private static final Logger LOGGER = Logger.getLogger(TwoSum.class.getName());
+
+    private TwoSum() {
+    }
+
     static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> seen = new HashMap<>();
 
@@ -19,6 +25,6 @@ public class TwoSum {
 
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
-        System.out.println(Arrays.toString(twoSum(nums, 9)));
+        LOGGER.info(() -> String.valueOf(Arrays.toString(twoSum(nums, 9))));
     }
 }

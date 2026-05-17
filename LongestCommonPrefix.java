@@ -1,7 +1,13 @@
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 // 14. Longest Common Prefix
 public class LongestCommonPrefix {
+    private static final Logger LOGGER = Logger.getLogger(LongestCommonPrefix.class.getName());
+
+    private LongestCommonPrefix() {
+    }
+
     static String longestCommonPrefix(String[] strs) {
         Arrays.sort(strs);
 
@@ -18,6 +24,6 @@ public class LongestCommonPrefix {
 
     public static void main(String[] args) {
         String[] strs = {"flower", "flow", "flight"};
-        System.out.println(longestCommonPrefix(strs));
+        LOGGER.info(() -> String.valueOf(longestCommonPrefix(strs)));
     }
 }

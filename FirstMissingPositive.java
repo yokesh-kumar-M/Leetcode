@@ -1,5 +1,12 @@
 // 41. First Missing Positive
+import java.util.logging.Logger;
+
 public class FirstMissingPositive {
+    private static final Logger LOGGER = Logger.getLogger(FirstMissingPositive.class.getName());
+
+    private FirstMissingPositive() {
+    }
+
     static int firstMissingPositive(int[] arr) {
         int i = 0;
         while (i < arr.length) {
@@ -26,6 +33,6 @@ public class FirstMissingPositive {
 
     public static void main(String[] args) {
         int[] arr = {3, 4, -1, 1};
-        System.out.println(firstMissingPositive(arr));
+        LOGGER.info(() -> String.valueOf(firstMissingPositive(arr)));
     }
 }

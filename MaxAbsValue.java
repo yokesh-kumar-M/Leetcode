@@ -1,5 +1,12 @@
 // 1131. Maximum of Absolute Value Expression
+import java.util.logging.Logger;
+
 public class MaxAbsValue {
+    private static final Logger LOGGER = Logger.getLogger(MaxAbsValue.class.getName());
+
+    private MaxAbsValue() {
+    }
+
     static int maxAbsValExpr(int[] arr1, int[] arr2) {
         int n = arr1.length;
         int max = 0;
@@ -20,6 +27,6 @@ public class MaxAbsValue {
     public static void main(String[] args) {
         int[] arr1 = {2, 1, -4, 5};
         int[] arr2 = {3, -1, -6, 0};
-        System.out.println(maxAbsValExpr(arr1, arr2));
+        LOGGER.info(() -> String.valueOf(maxAbsValExpr(arr1, arr2)));
     }
 }

@@ -1,5 +1,12 @@
 // 53. Maximum Subarray
+import java.util.logging.Logger;
+
 public class MaximumSubarray {
+    private static final Logger LOGGER = Logger.getLogger(MaximumSubarray.class.getName());
+
+    private MaximumSubarray() {
+    }
+
     static int maxSubArray(int[] arr) {
         int currentMax = arr[0];
         int overallMax = arr[0];
@@ -13,6 +20,6 @@ public class MaximumSubarray {
 
     public static void main(String[] args) {
         int[] arr = {5, 4, -1, 7, 8};
-        System.out.println(maxSubArray(arr));
+        LOGGER.info(() -> String.valueOf(maxSubArray(arr)));
     }
 }

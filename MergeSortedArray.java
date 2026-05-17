@@ -1,7 +1,13 @@
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 // 88. Merge Sorted Array
 public class MergeSortedArray {
+    private static final Logger LOGGER = Logger.getLogger(MergeSortedArray.class.getName());
+
+    private MergeSortedArray() {
+    }
+
     static void merge(int[] nums1, int m, int[] nums2, int n) {
         int write = m + n - 1;
         int i = m - 1;
@@ -23,6 +29,6 @@ public class MergeSortedArray {
         int[] nums1 = {1, 2, 3, 0, 0, 0};
         int[] nums2 = {2, 5, 6};
         merge(nums1, 3, nums2, 3);
-        System.out.println(Arrays.toString(nums1));
+        LOGGER.info(() -> String.valueOf(Arrays.toString(nums1)));
     }
 }

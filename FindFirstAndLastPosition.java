@@ -1,7 +1,13 @@
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 // 34. Find First and Last Position of Element in Sorted Array
 public class FindFirstAndLastPosition {
+    private static final Logger LOGGER = Logger.getLogger(FindFirstAndLastPosition.class.getName());
+
+    private FindFirstAndLastPosition() {
+    }
+
     static int[] searchRange(int[] arr, int target) {
         int[] result = {-1, -1};
         result[0] = search(arr, target, true);
@@ -37,6 +43,6 @@ public class FindFirstAndLastPosition {
 
     public static void main(String[] args) {
         int[] nums = {5, 7, 7, 8, 8, 10};
-        System.out.println(Arrays.toString(searchRange(nums, 8)));
+        LOGGER.info(() -> String.valueOf(Arrays.toString(searchRange(nums, 8))));
     }
 }

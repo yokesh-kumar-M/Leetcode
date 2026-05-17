@@ -1,5 +1,12 @@
 // 657. Robot Return to Origin
+import java.util.logging.Logger;
+
 public class RobotReturn {
+    private static final Logger LOGGER = Logger.getLogger(RobotReturn.class.getName());
+
+    private RobotReturn() {
+    }
+
     static boolean judgeCircle(String moves) {
         int x = 0;
         int y = 0;
@@ -17,6 +24,6 @@ public class RobotReturn {
     }
 
     public static void main(String[] args) {
-        System.out.println(judgeCircle("RLUURDDDLU"));
+        LOGGER.info(() -> String.valueOf(judgeCircle("RLUURDDDLU")));
     }
 }

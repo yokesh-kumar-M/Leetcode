@@ -1,5 +1,12 @@
 // 3232. Find if Digit Game Can Be Won
+import java.util.logging.Logger;
+
 public class DigitGame {
+    private static final Logger LOGGER = Logger.getLogger(DigitGame.class.getName());
+
+    private DigitGame() {
+    }
+
     static boolean canAliceWin(int[] nums) {
         int singleDigitSum = 0;
         int doubleDigitSum = 0;
@@ -16,6 +23,6 @@ public class DigitGame {
 
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 10};
-        System.out.println(canAliceWin(nums));
+        LOGGER.info(() -> String.valueOf(canAliceWin(nums)));
     }
 }

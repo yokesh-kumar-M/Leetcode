@@ -1,5 +1,12 @@
 // 268. Missing Number
+import java.util.logging.Logger;
+
 public class MissingNumber {
+    private static final Logger LOGGER = Logger.getLogger(MissingNumber.class.getName());
+
+    private MissingNumber() {
+    }
+
     static int missingNumber(int[] nums) {
         int i = 0;
         while (i < nums.length) {
@@ -26,6 +33,6 @@ public class MissingNumber {
 
     public static void main(String[] args) {
         int[] arr = {4, 0, 2, 1};
-        System.out.println(missingNumber(arr));
+        LOGGER.info(() -> String.valueOf(missingNumber(arr)));
     }
 }

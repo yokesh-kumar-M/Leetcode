@@ -1,5 +1,12 @@
 // 2108. Find First Palindromic String in the Array
+import java.util.logging.Logger;
+
 public class FirstPalindromeInArray {
+    private static final Logger LOGGER = Logger.getLogger(FirstPalindromeInArray.class.getName());
+
+    private FirstPalindromeInArray() {
+    }
+
     static String firstPalindrome(String[] words) {
         for (String word : words) {
             if (isPalindrome(word)) {
@@ -25,6 +32,6 @@ public class FirstPalindromeInArray {
 
     public static void main(String[] args) {
         String[] words = {"abc", "car", "ada", "racecar", "cool"};
-        System.out.println(firstPalindrome(words));
+        LOGGER.info(() -> String.valueOf(firstPalindrome(words)));
     }
 }

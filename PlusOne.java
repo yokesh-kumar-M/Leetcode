@@ -1,7 +1,13 @@
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 // 66. Plus One
 public class PlusOne {
+    private static final Logger LOGGER = Logger.getLogger(PlusOne.class.getName());
+
+    private PlusOne() {
+    }
+
     static int[] plusOne(int[] digits) {
         for (int i = digits.length - 1; i >= 0; i--) {
             digits[i] += 1;
@@ -18,6 +24,6 @@ public class PlusOne {
 
     public static void main(String[] args) {
         int[] digits = {1, 2, 3};
-        System.out.println(Arrays.toString(plusOne(digits)));
+        LOGGER.info(() -> String.valueOf(Arrays.toString(plusOne(digits))));
     }
 }

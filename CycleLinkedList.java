@@ -1,5 +1,12 @@
 // 141. Linked List Cycle
+import java.util.logging.Logger;
+
 public class CycleLinkedList {
+    private static final Logger LOGGER = Logger.getLogger(CycleLinkedList.class.getName());
+
+    private CycleLinkedList() {
+    }
+
     static class ListNode {
         int val;
         ListNode next;
@@ -38,6 +45,6 @@ public class CycleLinkedList {
         third.next = fourth;
         fourth.next = second;
 
-        System.out.println(hasCycle(head));
+        LOGGER.info(() -> String.valueOf(hasCycle(head)));
     }
 }

@@ -1,5 +1,12 @@
 // 1800. Maximum Ascending Subarray Sum
+import java.util.logging.Logger;
+
 public class MaxAscArray {
+    private static final Logger LOGGER = Logger.getLogger(MaxAscArray.class.getName());
+
+    private MaxAscArray() {
+    }
+
     static int maxAscendingSum(int[] nums) {
         int max = nums[0];
         int current = nums[0];
@@ -17,6 +24,6 @@ public class MaxAscArray {
 
     public static void main(String[] args) {
         int[] arr = {10, 20, 30, 5, 10, 50};
-        System.out.println(maxAscendingSum(arr));
+        LOGGER.info(() -> String.valueOf(maxAscendingSum(arr)));
     }
 }

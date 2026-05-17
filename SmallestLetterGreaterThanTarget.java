@@ -1,5 +1,12 @@
 // 744. Find Smallest Letter Greater Than Target
+import java.util.logging.Logger;
+
 public class SmallestLetterGreaterThanTarget {
+    private static final Logger LOGGER = Logger.getLogger(SmallestLetterGreaterThanTarget.class.getName());
+
+    private SmallestLetterGreaterThanTarget() {
+    }
+
     static char nextGreatestLetter(char[] letters, char target) {
         int start = 0;
         int end = letters.length - 1;
@@ -17,6 +24,6 @@ public class SmallestLetterGreaterThanTarget {
 
     public static void main(String[] args) {
         char[] letters = {'c', 'f', 'j'};
-        System.out.println(nextGreatestLetter(letters, 'c'));
+        LOGGER.info(() -> String.valueOf(nextGreatestLetter(letters, 'c')));
     }
 }

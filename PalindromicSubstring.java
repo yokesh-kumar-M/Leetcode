@@ -1,5 +1,12 @@
 // 647. Palindromic Substrings
+import java.util.logging.Logger;
+
 public class PalindromicSubstring {
+    private static final Logger LOGGER = Logger.getLogger(PalindromicSubstring.class.getName());
+
+    private PalindromicSubstring() {
+    }
+
     static int countSubstrings(String s) {
         int count = 0;
         for (int i = 0; i < s.length(); i++) {
@@ -20,6 +27,6 @@ public class PalindromicSubstring {
     }
 
     public static void main(String[] args) {
-        System.out.println(countSubstrings("aaa"));
+        LOGGER.info(() -> String.valueOf(countSubstrings("aaa")));
     }
 }

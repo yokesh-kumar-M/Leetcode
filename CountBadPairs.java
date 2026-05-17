@@ -1,8 +1,14 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 // 2364. Count Number of Bad Pairs
 public class CountBadPairs {
+    private static final Logger LOGGER = Logger.getLogger(CountBadPairs.class.getName());
+
+    private CountBadPairs() {
+    }
+
     static long countBadPairs(int[] nums) {
         Map<Integer, Long> diffCount = new HashMap<>();
         long goodPairs = 0;
@@ -20,6 +26,6 @@ public class CountBadPairs {
 
     public static void main(String[] args) {
         int[] arr = {4, 1, 3, 3};
-        System.out.println(countBadPairs(arr));
+        LOGGER.info(() -> String.valueOf(countBadPairs(arr)));
     }
 }

@@ -1,5 +1,12 @@
 // 287. Find the Duplicate Number
+import java.util.logging.Logger;
+
 public class FindDuplicate {
+    private static final Logger LOGGER = Logger.getLogger(FindDuplicate.class.getName());
+
+    private FindDuplicate() {
+    }
+
     static int findDuplicate(int[] arr) {
         int slow = arr[0];
         int fast = arr[0];
@@ -19,6 +26,6 @@ public class FindDuplicate {
 
     public static void main(String[] args) {
         int[] arr = {3, 1, 3, 4, 2};
-        System.out.println(findDuplicate(arr));
+        LOGGER.info(() -> String.valueOf(findDuplicate(arr)));
     }
 }

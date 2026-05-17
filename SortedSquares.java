@@ -1,7 +1,13 @@
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 // 977. Squares of a Sorted Array
 public class SortedSquares {
+    private static final Logger LOGGER = Logger.getLogger(SortedSquares.class.getName());
+
+    private SortedSquares() {
+    }
+
     static int[] sortedSquares(int[] nums) {
         int n = nums.length;
         int[] result = new int[n];
@@ -24,6 +30,6 @@ public class SortedSquares {
 
     public static void main(String[] args) {
         int[] arr = {-4, -1, 0, 3, 10};
-        System.out.println(Arrays.toString(sortedSquares(arr)));
+        LOGGER.info(() -> String.valueOf(Arrays.toString(sortedSquares(arr))));
     }
 }

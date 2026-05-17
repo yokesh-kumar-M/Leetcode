@@ -1,5 +1,12 @@
 // 876. Middle of the Linked List
+import java.util.logging.Logger;
+
 public class MiddleOfLinkedList {
+    private static final Logger LOGGER = Logger.getLogger(MiddleOfLinkedList.class.getName());
+
+    private MiddleOfLinkedList() {
+    }
+
     static class ListNode {
         int val;
         ListNode next;
@@ -27,6 +34,6 @@ public class MiddleOfLinkedList {
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
 
-        System.out.println(middleNode(head).val);
+        LOGGER.info(() -> String.valueOf(middleNode(head).val));
     }
 }

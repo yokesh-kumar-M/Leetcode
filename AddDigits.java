@@ -1,5 +1,12 @@
 // 258. Add Digits
+import java.util.logging.Logger;
+
 public class AddDigits {
+    private static final Logger LOGGER = Logger.getLogger(AddDigits.class.getName());
+
+    private AddDigits() {
+    }
+
     static int addDigits(int num) {
         if (num < 10) {
             return num;
@@ -13,6 +20,6 @@ public class AddDigits {
     }
 
     public static void main(String[] args) {
-        System.out.println(addDigits(38));
+        LOGGER.info(() -> String.valueOf(addDigits(38)));
     }
 }
