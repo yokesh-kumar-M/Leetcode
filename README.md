@@ -1,6 +1,13 @@
-# Leetcode Solutions
+# Leetcode Solutions (Java)
 
-Java solutions to selected Leetcode problems. Each file is self-contained with a `main` method for local testing.
+[![Java](https://img.shields.io/badge/Java-8-007396?logo=openjdk)](https://www.oracle.com/java/)
+[![Problems](https://img.shields.io/badge/Solved-48%2B-success)](#problems)
+[![Style](https://img.shields.io/badge/SonarLint-clean-brightgreen)](#code-style)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+Java solutions to LeetCode problems, organised by category. Each file is **self-contained** — single class, single `main` method — so you can compile and run any solution in isolation.
+
+> **Why another LeetCode-solutions repo?** Two reasons. First, every solution is written in **production style**: private constructors on utility classes (suppresses SonarLint `S1118`), `Logger` instead of `System.out.println` (suppresses `S106`), explicit imports. If you're prepping for senior-engineer interviews where code-style is part of the scoring, this is the cleaner reference. Second, files are flat and grouped by technique in the index below — easy to navigate by problem number or by topic.
 
 ## Run
 
@@ -8,6 +15,16 @@ Java solutions to selected Leetcode problems. Each file is self-contained with a
 javac TwoSum.java
 java TwoSum
 ```
+
+Java 8 (`javac 1.8.0_431`) is enough for everything in here.
+
+## Code style
+
+- Each problem is one `.java` file, one top-level class. The class name matches the file name.
+- Utility classes have a `private` constructor (no implicit `public` one) to satisfy `java:S1118`.
+- Output uses `java.util.logging.Logger` rather than `System.out.println` to satisfy `java:S106`.
+- Inputs/outputs in `main()` are hardcoded examples — easy to swap when debugging a specific test case.
+- No external dependencies. Java standard library only.
 
 ## Problems
 
@@ -78,3 +95,23 @@ java TwoSum
 | 1780 | Check if Number is a Sum of Powers of Three | [CheckPowersOfThree.java](CheckPowersOfThree.java) |
 | 2652 | Sum Multiples | [SumMultiples.java](SumMultiples.java) |
 | 3024 | Type of Triangle | [TypeOfTriangle.java](TypeOfTriangle.java) |
+
+---
+
+## Contributing
+
+Pull requests welcome. If you're adding a solution:
+
+1. Use the existing file layout (one class, private constructor if utility, `Logger` for output).
+2. Add an entry to the right table above (alphabetised by problem number within its category).
+3. Compile + run locally before pushing — `javac YourFile.java && java YourFile`.
+
+## Related projects
+
+- [Portfolio](https://github.com/yokesh-kumar-M/Portfolio) — Iron Man HUD personal site.
+- [SprayMaster](https://github.com/yokesh-kumar-M/SprayMaster) — Python network login auditor.
+- [PIIcasso](https://github.com/yokesh-kumar-M/Piicasso) — PII intelligence platform.
+
+## License
+
+[MIT](LICENSE) for the solutions. Problem statements are © LeetCode Inc. — see the `ATTRIBUTION NOTICE` in `LICENSE`.
